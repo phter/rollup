@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rollup/rollup"
+    "url": "https://github.com/phter/rollup"
   },
   "keywords": [
     "modules",
