@@ -418,12 +418,11 @@ export default class Bundle {
 							if ( dependsOn[ module.id ][ a.id ] && dependsOn[ module.id ][ b.id ] ) {
 								parent = module.id;
 								return true;
-							} else {
-								visited[ module.id ] = true;
-								for ( let i = 0; i < module.dependencies.length; i += 1 ) {
-									const dependency = module.dependencies[i];
-									if ( !visited[ dependency.id ] && findParent( dependency ) ) return true;
-								}
+							}
+							visited[ module.id ] = true;
+							for ( let i = 0; i < module.dependencies.length; i += 1 ) {
+								const dependency = module.dependencies[i];
+								if ( !visited[ dependency.id ] && findParent( dependency ) ) return true;
 							}
 						};
 
